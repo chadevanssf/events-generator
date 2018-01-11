@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>baseIconName</name>
+                <value>utility:broadcast</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>eventName</name>
+                <value>Log__e</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>mdtGroupName</name>
+                <value>Stage</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>My Platform Events</value>
+            </componentInstanceProperties>
+            <componentName>GenerateEvent_ButtonList</componentName>
+        </componentInstances>
+        <name>column1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>channel</name>
+                <value>/event/Log__e</value>
+            </componentInstanceProperties>
+            <componentName>streamingDemo</componentName>
+        </componentInstances>
+        <name>column2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Events Generator</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateTwoColumns</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

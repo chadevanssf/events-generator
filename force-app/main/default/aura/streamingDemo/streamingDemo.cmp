@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" >
+    <aura:attribute name="channel" type="String" default="/event/Log__e" required="true" />
+    
+	<c:streaming channel="{!v.channel}" onMessage="{!c.handleMessage}"/>
+    
+    <lightning:card title="Streaming Component Demo" class="cardHeight">
+        <p class="slds-p-horizontal--small">
+		    {!v.body}
+        </p>
+    </lightning:card>
+</aura:component>
