@@ -1,0 +1,19 @@
+<aura:component controller="GenerateEventController" implements="flexipage:availableForAllPageTypes" access="global" >
+    <!-- Public -->
+    <aura:attribute name="baseIconName" type="String" default="utility:broadcast" />
+    <aura:attribute name="eventName" type="String" default="Log__e" required="true" />
+    <aura:attribute name="mdtName" type="String" default="Stage_One" />
+    
+    <!-- Private -->
+    <aura:attribute name="label" type="String" access="Private" />
+    <aura:attribute name="eventBody" type="String" access="Private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Must use unbound expression for baseIconName to preserve original value -->
+    <lightning:button aura:id="eventbutton"
+                      variant="brand"
+                      label="{!v.label}"
+                      iconName="{#v.baseIconName}"
+                      onclick="{!c.handleClick}" />
+</aura:component>

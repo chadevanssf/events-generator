@@ -1,0 +1,31 @@
+<aura:component controller="GenerateEventController" implements="flexipage:availableForAllPageTypes" access="global" >
+    <!-- Public -->
+    <aura:attribute name="eventName" type="String" default="Log__e" required="true" />
+    <aura:attribute name="title" type="String" default="Generate Platform Events" />
+    <aura:attribute name="baseIconName" type="String" default="utility:broadcast" />
+    <aura:attribute name="mdtGroupName" type="String" default="Stage" />
+    
+    <!-- Private -->
+    <aura:attribute name="mdtEntries" type="List" access="Private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card >
+        <aura:set attribute="title">
+            <lightning:icon iconName="{#v.baseIconName}" size="medium"/>
+            {!v.title}
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <ul class="slds-has-block-links_space">
+                <aura:iteration items="{!v.mdtEntries}" var="mdtEntry" indexVar="i">
+                    <li class="{!i == 0 ? 'slds-p-top_none' : 'slds-p-top_medium'}">
+                        <c:GenerateEvent_Button baseIconName="{!v.baseIconName}"
+                                                eventName="{!v.eventName}"
+                                                mdtName="{!mdtEntry.DeveloperName}" />
+                    </li>
+                </aura:iteration>
+            </ul>
+        </p>
+    </lightning:card>
+    
+</aura:component>
