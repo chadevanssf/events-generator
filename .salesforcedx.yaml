@@ -1,0 +1,9 @@
+scratch-org-def: config/project-scratch-def.json
+assign-permset: true
+permset-name: Events-Generator
+run-apex-tests: false
+delete-scratch-org: false
+show-scratch-org-url: true
+data-plans:
+  - ./data/EventTest__c-plan.json
+open-path: one/one.app#/n/Events_Generator
