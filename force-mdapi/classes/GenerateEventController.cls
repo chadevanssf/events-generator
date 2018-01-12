@@ -1,10 +1,15 @@
 public class GenerateEventController {
     @AuraEnabled
     public static void publishEvent(SObject newEvent) {
+        publishEvents(newEvent);
+    }
+    
+    public static List<Database.SaveResult> publishEvents(SObject newEvent) {
         List<SObject> events = new List<SObject>();
         events.add(newEvent);
         
         List<Database.SaveResult> results = EventBus.publish(events);
+        return results;
     }
     
     @AuraEnabled
@@ -23,5 +28,4 @@ public class GenerateEventController {
                                                WHERE DeveloperName = :devName];
         return results[0];
     }
-
 }

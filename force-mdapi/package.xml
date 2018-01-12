@@ -15,7 +15,9 @@
   <types>
     <name>ApexClass</name>
     <members>GenerateEventController</members>
+    <members>GenerateEventControllerTest</members>
     <members>SessionController</members>
+    <members>SessionControllerTest</members>
   </types>
   <types>
     <name>CustomMetadata</name>
