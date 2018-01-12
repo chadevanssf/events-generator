@@ -37,7 +37,7 @@ Configure Custom Metadata Type **Events_Generator__mdt**
 
 - Add new entries to correspond to the number of buttons to display
 - Each entry is another button on the list
-- Use **Group__c** to have multiply list of buttons
+- Use **Group__c** to have multiple lists of buttons in the same Org
 - **Event_Data__c** is the JSON representation of the event, the same as would be entered into Workbench REST Explorer
 
 ## Testing
